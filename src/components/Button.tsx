@@ -1,7 +1,10 @@
-function Button(){
-    return (
-        <button>Clique me</button>
-    )
+type ButtonProps = {
+    children?: string;
 }
 
-export default Button;
+export function Button(props: ButtonProps){
+    return (
+        <button>{props.children || 'Default'}</button>
+    )
+}
+// named export
